@@ -19,15 +19,17 @@ import GameplayKit
 class QuizViewController: UIViewController {
     
     var category : String = ""
-    var famousFoodNames = ["BhajiPav", "VadaPav","Dabeli","PaniPuri","Samosa"]
-    let fruitsNames = ["Mango", "Keru","Apple"]
-    let vegetablesNames = ["Palak","Tindoora","Dudhi"]
-    let spicesNames = ["hardar","methu"]
+    var famousFoodNames = ["AlooTikki", "BhajiPav","Bhel","CholeBhature","Dabeli","DahiVada","DryManchurian","Khaman","MasalaDosa","PaniPuri","PaneerTikka","PaniPuri", "Samosa","VadaPav"]
+    let fruitsNames = ["Carambola","Chapa","Dadham","Draksh","Galeli","Jambu","Jamrukh","KaachiKeri","Keri","Keru","Limbu","Safarjan","Sherdi","Tarbooch","VilayatiImli"]
+    
+    let vegetablesNames = ["Bataka","Dudhi","Kaakdi","Kanda","Palak","Tindoora","TuvarLilva","Vatana"]
+    let spicesNames = ["Ajmo","Hardar","LaalMarchu","Mari","Meethu"]
     var selectedCatNames = [String]()
     var imageNum = 0;
     var button = UIButton()
     
     @IBAction func NextButton(_ sender: UIButton) {
+        displayNextImage()
     }
     
     @IBAction func ExitButton(_ sender: UIButton) {
@@ -35,10 +37,8 @@ class QuizViewController: UIViewController {
     }
     @IBOutlet weak var FoodImageView: UIImageView!
     @IBAction func OptionsSelected(_ sender: UIButton) {
-        
-         button = sender
-        print("Hey I was clicked and my tag is ")
-        print(button.tag)
+        print("Hey i am inside the Options selected and My tag number is")
+        print(sender.tag)
         
     }
     
@@ -53,8 +53,9 @@ class QuizViewController: UIViewController {
         print("Hey I am in Quiz View")
         print (category)
         setSelectedCatNames()
-        shuffleTheArray()
-        imageNum = -1;
+        selectedCatNames = shuffleTheArray(input : selectedCatNames)
+        print(selectedCatNames)
+        imageNum = -1
         displayNextImage()
         super.viewDidLoad()
     }
@@ -103,16 +104,16 @@ class QuizViewController: UIViewController {
     
     //MARK: shuffleTheArray()
     //Time Complexity is O(n). Most efficient way!
-    func shuffleTheArray(){
-        var last = selectedCatNames.count - 1;
+    func shuffleTheArray<T>(input : [T])->[T]{
+        var shuffledArray = input;
+        var last = shuffledArray.count - 1;
         while(last > 0)
         {
             let rand = Int(arc4random_uniform(UInt32(last)))
-            selectedCatNames.swapAt(last, rand)
+            shuffledArray.swapAt(last, rand)
             last -= 1
         }
-        print ("Shuffled Array")
-        print(selectedCatNames)
+        return shuffledArray
         
     }
     
@@ -123,15 +124,61 @@ class QuizViewController: UIViewController {
         print(imageNum)
         if (imageNum < selectedCatNames.count){
             FoodImageView.image = UIImage(named: "\(selectedCatNames[imageNum])\(".jpg")")
-            let btn = self.view.viewWithTag(1) as? UIButton
-            btn?.setTitle("Hello", for: .normal)
-            
-          
-            
-            
-            
+            setOptions();
+        }
+        else {
+            self.dismiss(animated: true, completion: nil)
         }
     }
+            
+            
+            
+    //MARK: setOptions()
+    
+    func setOptions(){
+            var randomBtnTags = [10,11,12,13]
+            var randomOptions = [selectedCatNames[imageNum]]
+        
+        for _ in 1...3{
+            let option = getRandomName(isPresent: randomOptions)
+            randomOptions.append(option)
+        }
+
+        randomOptions = shuffleTheArray(input: randomOptions)
+        randomBtnTags = shuffleTheArray(input: randomBtnTags)
+        print(randomOptions)
+        print(randomBtnTags)
+        for i in 0...3{
+                let btn = self.view.viewWithTag(randomBtnTags[i]) as? UIButton
+                    btn?.setTitle(randomOptions[i], for: .normal)
+        }
+            
+    }
+    
+    
+    
+    
+    
+    
+    //MARK : getRandomName()
+    func getRandomName(isPresent : [String])-> String {
+        
+        var option = selectedCatNames[Int(arc4random_uniform(UInt32(selectedCatNames.count)))]
+        
+        if (isPresent.contains(option)){
+            option = getRandomName(isPresent: isPresent)
+        }
+        
+        return option
+        
+    }
+    
+    
+            
+            
+            
+    
+    
     
     
     

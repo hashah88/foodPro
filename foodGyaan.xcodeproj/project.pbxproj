@@ -7,49 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2388F7702105456A007F85DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388F76F2105456A007F85DF /* AppDelegate.swift */; };
-		2388F7752105456A007F85DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388F7732105456A007F85DF /* Main.storyboard */; };
-		2388F7772105456C007F85DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2388F7762105456C007F85DF /* Assets.xcassets */; };
-		2388F77A2105456C007F85DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388F7782105456C007F85DF /* LaunchScreen.storyboard */; };
-		2388F786210CA41A007F85DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388F784210CA41A007F85DF /* ViewController.swift */; };
-		2388F787210CA41A007F85DF /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388F785210CA41A007F85DF /* QuizViewController.swift */; };
-		23BABF10210CABCA008573C1 /* Palak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF00210CABCA008573C1 /* Palak.jpg */; };
-		23BABF11210CABCA008573C1 /* Tindoora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF01210CABCA008573C1 /* Tindoora.jpg */; };
-		23BABF12210CABCA008573C1 /* Dudhi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF02210CABCA008573C1 /* Dudhi.jpg */; };
-		23BABF13210CABCA008573C1 /* BhajiPav.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF04210CABCA008573C1 /* BhajiPav.jpg */; };
-		23BABF14210CABCA008573C1 /* VadaPav.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF05210CABCA008573C1 /* VadaPav.jpg */; };
-		23BABF15210CABCA008573C1 /* Dabeli.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF06210CABCA008573C1 /* Dabeli.jpg */; };
-		23BABF16210CABCA008573C1 /* PaniPuri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF07210CABCA008573C1 /* PaniPuri.jpg */; };
-		23BABF17210CABCA008573C1 /* Samosa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF08210CABCA008573C1 /* Samosa.jpg */; };
-		23BABF18210CABCA008573C1 /* Mango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF0A210CABCA008573C1 /* Mango.jpg */; };
-		23BABF19210CABCA008573C1 /* Keru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF0B210CABCA008573C1 /* Keru.jpg */; };
-		23BABF1A210CABCA008573C1 /* Apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF0C210CABCA008573C1 /* Apple.jpg */; };
-		23BABF1B210CABCA008573C1 /* hardar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF0E210CABCA008573C1 /* hardar.jpg */; };
-		23BABF1C210CABCA008573C1 /* meethu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23BABF0F210CABCA008573C1 /* meethu.jpg */; };
+		23B1838C210E6BF700309AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B18355210E6BF700309AA4 /* LaunchScreen.storyboard */; };
+		23B1838D210E6BF700309AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B18357210E6BF700309AA4 /* Assets.xcassets */; };
+		23B1838E210E6BF700309AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B18358210E6BF700309AA4 /* Main.storyboard */; };
+		23B1838F210E6BF700309AA4 /* Palak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1835B210E6BF700309AA4 /* Palak.jpg */; };
+		23B18390210E6BF700309AA4 /* Tindoora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1835C210E6BF700309AA4 /* Tindoora.jpg */; };
+		23B18391210E6BF700309AA4 /* Bataka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1835D210E6BF700309AA4 /* Bataka.jpg */; };
+		23B18392210E6BF700309AA4 /* Dudhi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1835E210E6BF700309AA4 /* Dudhi.jpg */; };
+		23B18393210E6BF700309AA4 /* Kaakdi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1835F210E6BF700309AA4 /* Kaakdi.jpg */; };
+		23B18394210E6BF700309AA4 /* TuvarLilva.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18360210E6BF700309AA4 /* TuvarLilva.jpg */; };
+		23B18395210E6BF700309AA4 /* Vatana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18361210E6BF700309AA4 /* Vatana.jpg */; };
+		23B18396210E6BF700309AA4 /* Kanda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18362210E6BF700309AA4 /* Kanda.jpg */; };
+		23B18397210E6BF700309AA4 /* Bhel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18364210E6BF700309AA4 /* Bhel.jpg */; };
+		23B18398210E6BF700309AA4 /* DahiVada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18365210E6BF700309AA4 /* DahiVada.jpg */; };
+		23B18399210E6BF700309AA4 /* Khaman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18366210E6BF700309AA4 /* Khaman.jpg */; };
+		23B1839A210E6BF700309AA4 /* BhajiPav.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18367210E6BF700309AA4 /* BhajiPav.jpg */; };
+		23B1839B210E6BF700309AA4 /* VadaPav.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18368210E6BF700309AA4 /* VadaPav.jpg */; };
+		23B1839C210E6BF700309AA4 /* PaneerTikka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18369210E6BF700309AA4 /* PaneerTikka.jpg */; };
+		23B1839D210E6BF700309AA4 /* Dabeli.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1836A210E6BF700309AA4 /* Dabeli.jpg */; };
+		23B1839E210E6BF700309AA4 /* DryManchurian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1836B210E6BF700309AA4 /* DryManchurian.jpg */; };
+		23B1839F210E6BF700309AA4 /* CholeBhature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1836C210E6BF700309AA4 /* CholeBhature.jpg */; };
+		23B183A0210E6BF700309AA4 /* PaniPuri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1836D210E6BF700309AA4 /* PaniPuri.jpg */; };
+		23B183A1210E6BF700309AA4 /* AlooTikki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1836E210E6BF700309AA4 /* AlooTikki.jpg */; };
+		23B183A2210E6BF700309AA4 /* MasalaDosa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1836F210E6BF700309AA4 /* MasalaDosa.jpg */; };
+		23B183A3210E6BF700309AA4 /* Samosa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18370210E6BF700309AA4 /* Samosa.jpg */; };
+		23B183A4210E6BF700309AA4 /* Limbu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18372210E6BF700309AA4 /* Limbu.jpg */; };
+		23B183A5210E6BF700309AA4 /* Galeli.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18373210E6BF700309AA4 /* Galeli.jpg */; };
+		23B183A6210E6BF700309AA4 /* Draksh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18374210E6BF700309AA4 /* Draksh.jpg */; };
+		23B183A7210E6BF700309AA4 /* Keru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18375210E6BF700309AA4 /* Keru.jpg */; };
+		23B183A8210E6BF700309AA4 /* Dadham.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18376210E6BF700309AA4 /* Dadham.jpg */; };
+		23B183A9210E6BF700309AA4 /* Carambola.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18377210E6BF700309AA4 /* Carambola.jpg */; };
+		23B183AA210E6BF700309AA4 /* KaachiKeri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18378210E6BF700309AA4 /* KaachiKeri.jpg */; };
+		23B183AB210E6BF700309AA4 /* Tarbooch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18379210E6BF700309AA4 /* Tarbooch.jpg */; };
+		23B183AC210E6BF700309AA4 /* Keri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1837A210E6BF700309AA4 /* Keri.jpg */; };
+		23B183AD210E6BF700309AA4 /* Sherdi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1837B210E6BF700309AA4 /* Sherdi.jpg */; };
+		23B183AE210E6BF700309AA4 /* Chapa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1837C210E6BF700309AA4 /* Chapa.jpg */; };
+		23B183AF210E6BF700309AA4 /* VilayatiImli.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1837D210E6BF700309AA4 /* VilayatiImli.jpg */; };
+		23B183B0210E6BF700309AA4 /* Jambu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1837E210E6BF700309AA4 /* Jambu.jpg */; };
+		23B183B1210E6BF700309AA4 /* Safarjan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B1837F210E6BF700309AA4 /* Safarjan.jpg */; };
+		23B183B2210E6BF700309AA4 /* Jamrukh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18380210E6BF700309AA4 /* Jamrukh.jpg */; };
+		23B183B3210E6BF700309AA4 /* Hardar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18382210E6BF700309AA4 /* Hardar.jpg */; };
+		23B183B4210E6BF700309AA4 /* Ajmo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18383210E6BF700309AA4 /* Ajmo.jpg */; };
+		23B183B5210E6BF700309AA4 /* LaalMarchu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18384210E6BF700309AA4 /* LaalMarchu.jpg */; };
+		23B183B6210E6BF700309AA4 /* Meethu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18385210E6BF700309AA4 /* Meethu.jpg */; };
+		23B183B7210E6BF700309AA4 /* Mari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23B18386210E6BF700309AA4 /* Mari.jpg */; };
+		23B183B8210E6BF700309AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B18387210E6BF700309AA4 /* AppDelegate.swift */; };
+		23B183B9210E6BF700309AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B18389210E6BF700309AA4 /* ViewController.swift */; };
+		23B183BA210E6BF700309AA4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1838A210E6BF700309AA4 /* QuizViewController.swift */; };
+		23B183BB210E6BF700309AA4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23B1838B210E6BF700309AA4 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2388F76C2105456A007F85DF /* foodGyaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodGyaan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2388F76F2105456A007F85DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2388F7742105456A007F85DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2388F7762105456C007F85DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2388F7792105456C007F85DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2388F77B2105456C007F85DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2388F784210CA41A007F85DF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2388F785210CA41A007F85DF /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		23BABF00210CABCA008573C1 /* Palak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Palak.jpg; sourceTree = "<group>"; };
-		23BABF01210CABCA008573C1 /* Tindoora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tindoora.jpg; sourceTree = "<group>"; };
-		23BABF02210CABCA008573C1 /* Dudhi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dudhi.jpg; sourceTree = "<group>"; };
-		23BABF04210CABCA008573C1 /* BhajiPav.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BhajiPav.jpg; sourceTree = "<group>"; };
-		23BABF05210CABCA008573C1 /* VadaPav.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VadaPav.jpg; sourceTree = "<group>"; };
-		23BABF06210CABCA008573C1 /* Dabeli.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dabeli.jpg; sourceTree = "<group>"; };
-		23BABF07210CABCA008573C1 /* PaniPuri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PaniPuri.jpg; sourceTree = "<group>"; };
-		23BABF08210CABCA008573C1 /* Samosa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Samosa.jpg; sourceTree = "<group>"; };
-		23BABF0A210CABCA008573C1 /* Mango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mango.jpg; sourceTree = "<group>"; };
-		23BABF0B210CABCA008573C1 /* Keru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Keru.jpg; sourceTree = "<group>"; };
-		23BABF0C210CABCA008573C1 /* Apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Apple.jpg; sourceTree = "<group>"; };
-		23BABF0E210CABCA008573C1 /* hardar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hardar.jpg; sourceTree = "<group>"; };
-		23BABF0F210CABCA008573C1 /* meethu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meethu.jpg; sourceTree = "<group>"; };
+		23B18355210E6BF700309AA4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23B18356210E6BF700309AA4 /* TryItHere.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TryItHere.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		23B18357210E6BF700309AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23B18358210E6BF700309AA4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		23B1835B210E6BF700309AA4 /* Palak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Palak.jpg; sourceTree = "<group>"; };
+		23B1835C210E6BF700309AA4 /* Tindoora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tindoora.jpg; sourceTree = "<group>"; };
+		23B1835D210E6BF700309AA4 /* Bataka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bataka.jpg; sourceTree = "<group>"; };
+		23B1835E210E6BF700309AA4 /* Dudhi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dudhi.jpg; sourceTree = "<group>"; };
+		23B1835F210E6BF700309AA4 /* Kaakdi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kaakdi.jpg; sourceTree = "<group>"; };
+		23B18360210E6BF700309AA4 /* TuvarLilva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TuvarLilva.jpg; sourceTree = "<group>"; };
+		23B18361210E6BF700309AA4 /* Vatana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Vatana.jpg; sourceTree = "<group>"; };
+		23B18362210E6BF700309AA4 /* Kanda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kanda.jpg; sourceTree = "<group>"; };
+		23B18364210E6BF700309AA4 /* Bhel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bhel.jpg; sourceTree = "<group>"; };
+		23B18365210E6BF700309AA4 /* DahiVada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DahiVada.jpg; sourceTree = "<group>"; };
+		23B18366210E6BF700309AA4 /* Khaman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Khaman.jpg; sourceTree = "<group>"; };
+		23B18367210E6BF700309AA4 /* BhajiPav.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BhajiPav.jpg; sourceTree = "<group>"; };
+		23B18368210E6BF700309AA4 /* VadaPav.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VadaPav.jpg; sourceTree = "<group>"; };
+		23B18369210E6BF700309AA4 /* PaneerTikka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PaneerTikka.jpg; sourceTree = "<group>"; };
+		23B1836A210E6BF700309AA4 /* Dabeli.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dabeli.jpg; sourceTree = "<group>"; };
+		23B1836B210E6BF700309AA4 /* DryManchurian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DryManchurian.jpg; sourceTree = "<group>"; };
+		23B1836C210E6BF700309AA4 /* CholeBhature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CholeBhature.jpg; sourceTree = "<group>"; };
+		23B1836D210E6BF700309AA4 /* PaniPuri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PaniPuri.jpg; sourceTree = "<group>"; };
+		23B1836E210E6BF700309AA4 /* AlooTikki.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlooTikki.jpg; sourceTree = "<group>"; };
+		23B1836F210E6BF700309AA4 /* MasalaDosa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MasalaDosa.jpg; sourceTree = "<group>"; };
+		23B18370210E6BF700309AA4 /* Samosa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Samosa.jpg; sourceTree = "<group>"; };
+		23B18372210E6BF700309AA4 /* Limbu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Limbu.jpg; sourceTree = "<group>"; };
+		23B18373210E6BF700309AA4 /* Galeli.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Galeli.jpg; sourceTree = "<group>"; };
+		23B18374210E6BF700309AA4 /* Draksh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Draksh.jpg; sourceTree = "<group>"; };
+		23B18375210E6BF700309AA4 /* Keru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Keru.jpg; sourceTree = "<group>"; };
+		23B18376210E6BF700309AA4 /* Dadham.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dadham.jpg; sourceTree = "<group>"; };
+		23B18377210E6BF700309AA4 /* Carambola.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Carambola.jpg; sourceTree = "<group>"; };
+		23B18378210E6BF700309AA4 /* KaachiKeri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KaachiKeri.jpg; sourceTree = "<group>"; };
+		23B18379210E6BF700309AA4 /* Tarbooch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tarbooch.jpg; sourceTree = "<group>"; };
+		23B1837A210E6BF700309AA4 /* Keri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Keri.jpg; sourceTree = "<group>"; };
+		23B1837B210E6BF700309AA4 /* Sherdi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sherdi.jpg; sourceTree = "<group>"; };
+		23B1837C210E6BF700309AA4 /* Chapa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chapa.jpg; sourceTree = "<group>"; };
+		23B1837D210E6BF700309AA4 /* VilayatiImli.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VilayatiImli.jpg; sourceTree = "<group>"; };
+		23B1837E210E6BF700309AA4 /* Jambu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jambu.jpg; sourceTree = "<group>"; };
+		23B1837F210E6BF700309AA4 /* Safarjan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Safarjan.jpg; sourceTree = "<group>"; };
+		23B18380210E6BF700309AA4 /* Jamrukh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jamrukh.jpg; sourceTree = "<group>"; };
+		23B18382210E6BF700309AA4 /* Hardar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hardar.jpg; sourceTree = "<group>"; };
+		23B18383210E6BF700309AA4 /* Ajmo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ajmo.jpg; sourceTree = "<group>"; };
+		23B18384210E6BF700309AA4 /* LaalMarchu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaalMarchu.jpg; sourceTree = "<group>"; };
+		23B18385210E6BF700309AA4 /* Meethu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Meethu.jpg; sourceTree = "<group>"; };
+		23B18386210E6BF700309AA4 /* Mari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mari.jpg; sourceTree = "<group>"; };
+		23B18387210E6BF700309AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23B18389210E6BF700309AA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23B1838A210E6BF700309AA4 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		23B1838B210E6BF700309AA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +124,7 @@
 		2388F7632105456A007F85DF = {
 			isa = PBXGroup;
 			children = (
-				2388F76E2105456A007F85DF /* foodGyaan */,
+				23B18354210E6BF700309AA4 /* foodGyaan */,
 				2388F76D2105456A007F85DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,79 +137,108 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2388F76E2105456A007F85DF /* foodGyaan */ = {
+		23B18354210E6BF700309AA4 /* foodGyaan */ = {
 			isa = PBXGroup;
 			children = (
-				23BABEFE210CABCA008573C1 /* MyImages */,
-				2388F76F2105456A007F85DF /* AppDelegate.swift */,
-				2388F783210CA41A007F85DF /* Controllers */,
-				2388F7732105456A007F85DF /* Main.storyboard */,
-				2388F7762105456C007F85DF /* Assets.xcassets */,
-				2388F7782105456C007F85DF /* LaunchScreen.storyboard */,
-				2388F77B2105456C007F85DF /* Info.plist */,
+				23B18355210E6BF700309AA4 /* LaunchScreen.storyboard */,
+				23B18356210E6BF700309AA4 /* TryItHere.playground */,
+				23B18357210E6BF700309AA4 /* Assets.xcassets */,
+				23B18358210E6BF700309AA4 /* Main.storyboard */,
+				23B18359210E6BF700309AA4 /* MyImages */,
+				23B18387210E6BF700309AA4 /* AppDelegate.swift */,
+				23B18388210E6BF700309AA4 /* Controllers */,
+				23B1838B210E6BF700309AA4 /* Info.plist */,
 			);
 			path = foodGyaan;
 			sourceTree = "<group>";
 		};
-		2388F783210CA41A007F85DF /* Controllers */ = {
+		23B18359210E6BF700309AA4 /* MyImages */ = {
 			isa = PBXGroup;
 			children = (
-				2388F784210CA41A007F85DF /* ViewController.swift */,
-				2388F785210CA41A007F85DF /* QuizViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		23BABEFE210CABCA008573C1 /* MyImages */ = {
-			isa = PBXGroup;
-			children = (
-				23BABEFF210CABCA008573C1 /* Vegetables */,
-				23BABF03210CABCA008573C1 /* FamousFood */,
-				23BABF09210CABCA008573C1 /* Fruits */,
-				23BABF0D210CABCA008573C1 /* Spices */,
+				23B1835A210E6BF700309AA4 /* Vegetables */,
+				23B18363210E6BF700309AA4 /* FamousFood */,
+				23B18371210E6BF700309AA4 /* Fruits */,
+				23B18381210E6BF700309AA4 /* Spices */,
 			);
 			path = MyImages;
 			sourceTree = "<group>";
 		};
-		23BABEFF210CABCA008573C1 /* Vegetables */ = {
+		23B1835A210E6BF700309AA4 /* Vegetables */ = {
 			isa = PBXGroup;
 			children = (
-				23BABF00210CABCA008573C1 /* Palak.jpg */,
-				23BABF01210CABCA008573C1 /* Tindoora.jpg */,
-				23BABF02210CABCA008573C1 /* Dudhi.jpg */,
+				23B1835B210E6BF700309AA4 /* Palak.jpg */,
+				23B1835C210E6BF700309AA4 /* Tindoora.jpg */,
+				23B1835D210E6BF700309AA4 /* Bataka.jpg */,
+				23B1835E210E6BF700309AA4 /* Dudhi.jpg */,
+				23B1835F210E6BF700309AA4 /* Kaakdi.jpg */,
+				23B18360210E6BF700309AA4 /* TuvarLilva.jpg */,
+				23B18361210E6BF700309AA4 /* Vatana.jpg */,
+				23B18362210E6BF700309AA4 /* Kanda.jpg */,
 			);
 			path = Vegetables;
 			sourceTree = "<group>";
 		};
-		23BABF03210CABCA008573C1 /* FamousFood */ = {
+		23B18363210E6BF700309AA4 /* FamousFood */ = {
 			isa = PBXGroup;
 			children = (
-				23BABF04210CABCA008573C1 /* BhajiPav.jpg */,
-				23BABF05210CABCA008573C1 /* VadaPav.jpg */,
-				23BABF06210CABCA008573C1 /* Dabeli.jpg */,
-				23BABF07210CABCA008573C1 /* PaniPuri.jpg */,
-				23BABF08210CABCA008573C1 /* Samosa.jpg */,
+				23B18364210E6BF700309AA4 /* Bhel.jpg */,
+				23B18365210E6BF700309AA4 /* DahiVada.jpg */,
+				23B18366210E6BF700309AA4 /* Khaman.jpg */,
+				23B18367210E6BF700309AA4 /* BhajiPav.jpg */,
+				23B18368210E6BF700309AA4 /* VadaPav.jpg */,
+				23B18369210E6BF700309AA4 /* PaneerTikka.jpg */,
+				23B1836A210E6BF700309AA4 /* Dabeli.jpg */,
+				23B1836B210E6BF700309AA4 /* DryManchurian.jpg */,
+				23B1836C210E6BF700309AA4 /* CholeBhature.jpg */,
+				23B1836D210E6BF700309AA4 /* PaniPuri.jpg */,
+				23B1836E210E6BF700309AA4 /* AlooTikki.jpg */,
+				23B1836F210E6BF700309AA4 /* MasalaDosa.jpg */,
+				23B18370210E6BF700309AA4 /* Samosa.jpg */,
 			);
 			path = FamousFood;
 			sourceTree = "<group>";
 		};
-		23BABF09210CABCA008573C1 /* Fruits */ = {
+		23B18371210E6BF700309AA4 /* Fruits */ = {
 			isa = PBXGroup;
 			children = (
-				23BABF0A210CABCA008573C1 /* Mango.jpg */,
-				23BABF0B210CABCA008573C1 /* Keru.jpg */,
-				23BABF0C210CABCA008573C1 /* Apple.jpg */,
+				23B18372210E6BF700309AA4 /* Limbu.jpg */,
+				23B18373210E6BF700309AA4 /* Galeli.jpg */,
+				23B18374210E6BF700309AA4 /* Draksh.jpg */,
+				23B18375210E6BF700309AA4 /* Keru.jpg */,
+				23B18376210E6BF700309AA4 /* Dadham.jpg */,
+				23B18377210E6BF700309AA4 /* Carambola.jpg */,
+				23B18378210E6BF700309AA4 /* KaachiKeri.jpg */,
+				23B18379210E6BF700309AA4 /* Tarbooch.jpg */,
+				23B1837A210E6BF700309AA4 /* Keri.jpg */,
+				23B1837B210E6BF700309AA4 /* Sherdi.jpg */,
+				23B1837C210E6BF700309AA4 /* Chapa.jpg */,
+				23B1837D210E6BF700309AA4 /* VilayatiImli.jpg */,
+				23B1837E210E6BF700309AA4 /* Jambu.jpg */,
+				23B1837F210E6BF700309AA4 /* Safarjan.jpg */,
+				23B18380210E6BF700309AA4 /* Jamrukh.jpg */,
 			);
 			path = Fruits;
 			sourceTree = "<group>";
 		};
-		23BABF0D210CABCA008573C1 /* Spices */ = {
+		23B18381210E6BF700309AA4 /* Spices */ = {
 			isa = PBXGroup;
 			children = (
-				23BABF0E210CABCA008573C1 /* hardar.jpg */,
-				23BABF0F210CABCA008573C1 /* meethu.jpg */,
+				23B18382210E6BF700309AA4 /* Hardar.jpg */,
+				23B18383210E6BF700309AA4 /* Ajmo.jpg */,
+				23B18384210E6BF700309AA4 /* LaalMarchu.jpg */,
+				23B18385210E6BF700309AA4 /* Meethu.jpg */,
+				23B18386210E6BF700309AA4 /* Mari.jpg */,
 			);
 			path = Spices;
+			sourceTree = "<group>";
+		};
+		23B18388210E6BF700309AA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23B18389210E6BF700309AA4 /* ViewController.swift */,
+				23B1838A210E6BF700309AA4 /* QuizViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,22 +299,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23BABF11210CABCA008573C1 /* Tindoora.jpg in Resources */,
-				23BABF1C210CABCA008573C1 /* meethu.jpg in Resources */,
-				2388F77A2105456C007F85DF /* LaunchScreen.storyboard in Resources */,
-				23BABF1B210CABCA008573C1 /* hardar.jpg in Resources */,
-				23BABF15210CABCA008573C1 /* Dabeli.jpg in Resources */,
-				23BABF12210CABCA008573C1 /* Dudhi.jpg in Resources */,
-				23BABF10210CABCA008573C1 /* Palak.jpg in Resources */,
-				23BABF13210CABCA008573C1 /* BhajiPav.jpg in Resources */,
-				23BABF14210CABCA008573C1 /* VadaPav.jpg in Resources */,
-				23BABF17210CABCA008573C1 /* Samosa.jpg in Resources */,
-				23BABF1A210CABCA008573C1 /* Apple.jpg in Resources */,
-				23BABF16210CABCA008573C1 /* PaniPuri.jpg in Resources */,
-				2388F7772105456C007F85DF /* Assets.xcassets in Resources */,
-				23BABF19210CABCA008573C1 /* Keru.jpg in Resources */,
-				23BABF18210CABCA008573C1 /* Mango.jpg in Resources */,
-				2388F7752105456A007F85DF /* Main.storyboard in Resources */,
+				23B18394210E6BF700309AA4 /* TuvarLilva.jpg in Resources */,
+				23B18395210E6BF700309AA4 /* Vatana.jpg in Resources */,
+				23B183B2210E6BF700309AA4 /* Jamrukh.jpg in Resources */,
+				23B183B4210E6BF700309AA4 /* Ajmo.jpg in Resources */,
+				23B183B1210E6BF700309AA4 /* Safarjan.jpg in Resources */,
+				23B18392210E6BF700309AA4 /* Dudhi.jpg in Resources */,
+				23B18393210E6BF700309AA4 /* Kaakdi.jpg in Resources */,
+				23B183A9210E6BF700309AA4 /* Carambola.jpg in Resources */,
+				23B18397210E6BF700309AA4 /* Bhel.jpg in Resources */,
+				23B183A1210E6BF700309AA4 /* AlooTikki.jpg in Resources */,
+				23B183A3210E6BF700309AA4 /* Samosa.jpg in Resources */,
+				23B18396210E6BF700309AA4 /* Kanda.jpg in Resources */,
+				23B1839E210E6BF700309AA4 /* DryManchurian.jpg in Resources */,
+				23B183A2210E6BF700309AA4 /* MasalaDosa.jpg in Resources */,
+				23B183A8210E6BF700309AA4 /* Dadham.jpg in Resources */,
+				23B1838C210E6BF700309AA4 /* LaunchScreen.storyboard in Resources */,
+				23B183A7210E6BF700309AA4 /* Keru.jpg in Resources */,
+				23B183B6210E6BF700309AA4 /* Meethu.jpg in Resources */,
+				23B183AF210E6BF700309AA4 /* VilayatiImli.jpg in Resources */,
+				23B183B0210E6BF700309AA4 /* Jambu.jpg in Resources */,
+				23B183B5210E6BF700309AA4 /* LaalMarchu.jpg in Resources */,
+				23B183A0210E6BF700309AA4 /* PaniPuri.jpg in Resources */,
+				23B183B7210E6BF700309AA4 /* Mari.jpg in Resources */,
+				23B1839A210E6BF700309AA4 /* BhajiPav.jpg in Resources */,
+				23B1839D210E6BF700309AA4 /* Dabeli.jpg in Resources */,
+				23B183A6210E6BF700309AA4 /* Draksh.jpg in Resources */,
+				23B183AB210E6BF700309AA4 /* Tarbooch.jpg in Resources */,
+				23B18398210E6BF700309AA4 /* DahiVada.jpg in Resources */,
+				23B18399210E6BF700309AA4 /* Khaman.jpg in Resources */,
+				23B183AD210E6BF700309AA4 /* Sherdi.jpg in Resources */,
+				23B1839F210E6BF700309AA4 /* CholeBhature.jpg in Resources */,
+				23B183A5210E6BF700309AA4 /* Galeli.jpg in Resources */,
+				23B183A4210E6BF700309AA4 /* Limbu.jpg in Resources */,
+				23B183AE210E6BF700309AA4 /* Chapa.jpg in Resources */,
+				23B183BB210E6BF700309AA4 /* Info.plist in Resources */,
+				23B18390210E6BF700309AA4 /* Tindoora.jpg in Resources */,
+				23B18391210E6BF700309AA4 /* Bataka.jpg in Resources */,
+				23B1839C210E6BF700309AA4 /* PaneerTikka.jpg in Resources */,
+				23B1838D210E6BF700309AA4 /* Assets.xcassets in Resources */,
+				23B183AA210E6BF700309AA4 /* KaachiKeri.jpg in Resources */,
+				23B1838F210E6BF700309AA4 /* Palak.jpg in Resources */,
+				23B183B3210E6BF700309AA4 /* Hardar.jpg in Resources */,
+				23B1839B210E6BF700309AA4 /* VadaPav.jpg in Resources */,
+				23B1838E210E6BF700309AA4 /* Main.storyboard in Resources */,
+				23B183AC210E6BF700309AA4 /* Keri.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,32 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2388F787210CA41A007F85DF /* QuizViewController.swift in Sources */,
-				2388F786210CA41A007F85DF /* ViewController.swift in Sources */,
-				2388F7702105456A007F85DF /* AppDelegate.swift in Sources */,
+				23B183B9210E6BF700309AA4 /* ViewController.swift in Sources */,
+				23B183B8210E6BF700309AA4 /* AppDelegate.swift in Sources */,
+				23B183BA210E6BF700309AA4 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2388F7732105456A007F85DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2388F7742105456A007F85DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2388F7782105456C007F85DF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2388F7792105456C007F85DF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2388F77C2105456C007F85DF /* Debug */ = {

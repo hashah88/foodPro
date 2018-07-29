@@ -81,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Au-de-weg">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Au-de-weg">
                                 <rect key="frame" x="22" y="390" width="329" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.086217619478702545" green="0.60850793123245239" blue="0.26560312509536743" alpha="0.48192671654929575" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,7 +90,7 @@
                                     <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="tiw-WS-xpG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzK-6H-Fsn">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzK-6H-Fsn">
                                 <rect key="frame" x="22" y="445" width="329" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.45201287883151559" green="0.80136797897556289" blue="0.59762396696372977" alpha="0.81593860035211263" colorSpace="custom" customColorSpace="displayP3"/>
@@ -99,7 +99,7 @@
                                     <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="Acn-gD-Soo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI8-we-V5T">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI8-we-V5T">
                                 <rect key="frame" x="22" y="500" width="329" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.44018074301338017" green="0.80136797897556289" blue="0.60617124440479797" alpha="0.81593860035211263" colorSpace="custom" customColorSpace="displayP3"/>
@@ -108,7 +108,7 @@
                                     <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="wz9-bb-whT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXr-xR-fCm">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXr-xR-fCm">
                                 <rect key="frame" x="22" y="562" width="329" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.43844481910551975" green="0.80136797897556289" blue="0.61380837345174211" alpha="0.81593860035211263" colorSpace="custom" customColorSpace="displayP3"/>
