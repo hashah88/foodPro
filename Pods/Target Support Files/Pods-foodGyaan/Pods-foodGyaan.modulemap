@@ -1,0 +1,6 @@
+framework module Pods_foodGyaan {
+  umbrella header "Pods-foodGyaan-umbrella.h"
+
+  export *
+  module * { export * }
+}

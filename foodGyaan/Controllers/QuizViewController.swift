@@ -7,11 +7,6 @@
 //
 
 import UIKit
-import GameplayKit
-
-/**
- Extend array to enable random shuffling
- */
 
 
 
@@ -27,8 +22,17 @@ class QuizViewController: UIViewController {
     var selectedCatNames = [String]()
     var imageNum = 0;
     var button = UIButton()
+    var score = 0;
+    var optionBtnTags  = [10,11,12,13];
+    var optionBtns = [UIButton]()
+    
+    
+    @IBOutlet weak var Like: DOFavoriteButton!
+    
+    
     
     @IBAction func NextButton(_ sender: UIButton) {
+        Comment.text = " "
         displayNextImage()
     }
     
@@ -36,9 +40,17 @@ class QuizViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var FoodImageView: UIImageView!
+    
     @IBAction func OptionsSelected(_ sender: UIButton) {
-        print("Hey i am inside the Options selected and My tag number is")
-        print(sender.tag)
+       let userAns = sender.title(for: .normal)
+        checkAns(userAns: userAns!,userAnsBtnTag: sender.tag )
+    }
+    
+    @IBOutlet weak var Comment: UILabel!
+    
+    @IBOutlet weak var Score: UILabel!
+    
+    @IBAction func StopCheering(_ sender: UIButton) {
         
     }
     
@@ -46,16 +58,17 @@ class QuizViewController: UIViewController {
     
     
     
-    
-    
-    
     override func viewDidLoad() {
+        Like.addTarget(self, action: Selector(("tapped:")), for: .touchUpInside)
         print("Hey I am in Quiz View")
         print (category)
+        createOptionBtnArr();
+        changeBtnUI()
         setSelectedCatNames()
         selectedCatNames = shuffleTheArray(input : selectedCatNames)
         print(selectedCatNames)
         imageNum = -1
+        score = 0;
         displayNextImage()
         super.viewDidLoad()
     }
@@ -79,7 +92,15 @@ class QuizViewController: UIViewController {
     }
     */
 
-    
+    func tapped(sender: DOFavoriteButton) {
+        if sender.isSelected {
+            // deselect
+            sender.deselect()
+        } else {
+            // select with animation
+            sender.select()
+        }
+    }
     
     
     
@@ -136,7 +157,7 @@ class QuizViewController: UIViewController {
     //MARK: setOptions()
     
     func setOptions(){
-            var randomBtnTags = [10,11,12,13]
+            var randomBtnTags = optionBtnTags
             var randomOptions = [selectedCatNames[imageNum]]
         
         for _ in 1...3{
@@ -173,16 +194,82 @@ class QuizViewController: UIViewController {
         
     }
     
+    // MARK : checkAns()
+    func checkAns (userAns : String , userAnsBtnTag : Int)->Void{
+        if (userAns == selectedCatNames[imageNum]){
+            Comment.text = "GOOD JOB!!"
+            score = score + 1;
+          
+            Score.text = "Current Score : \(score)"
+            
+        }
+        else {
+            Comment.text = "It is Okay. Just keep trying"
+            // disable the other buttons
+            // animate the right button
+            // find the right button
+            var btnToAnimate = UIButton()
+            for i in optionBtnTags{
+                let btn = self.view.viewWithTag(i) as? UIButton
+                if (btn?.title(for: .normal) == selectedCatNames[imageNum]){
+                    btnToAnimate = btn!
+                }
+        }
+            
+            UIButton.animate(withDuration: 0.2, animations: {
+                for btn in self.optionBtns {
+                    if (btn != btnToAnimate){
+                        btn.backgroundColor = UIColor(hexFromString: "#D19D9C")
+                    }
+                    else {
+                        btn.backgroundColor = UIColor(hexFromString: "#B1D3C3")
+                    }
+                }
+//                btnToAnimate.backgroundColor = UIColor(hexFromString: "#B1D3C3")
+                btnToAnimate.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            })
+            
+    }
+    }
+    
+    //MARK : cheerUserUp();
+    
+    
+    //MARK  : changeBtnUI();
+    func changeBtnUI(){
+        for i in optionBtnTags{
+             let btn = self.view.viewWithTag(i) as? UIButton
+             btn?.layer.borderWidth = 2.0
+            btn?.layer.cornerRadius = (btn?.bounds.size.height)!/2
+             btn?.clipsToBounds = true
+            btn?.layer.shadowOffset = CGSize(width: 3, height: 5)
+            btn?.layer.shadowColor = UIColor(hexFromString: "#C0C0C0").cgColor
+            btn?.layer.shadowRadius = 2
+            btn?.layer.shadowOpacity = 1.0
+            btn?.layer.masksToBounds = false
+             btn?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            
+        }
+    }
+    
+    // MARK : createOptionBtnArr();
+    func createOptionBtnArr(){
+        for i in optionBtnTags{
+            let btn = self.view.viewWithTag(i) as? UIButton
+            optionBtns.append(btn!)
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+ 
     
             
-            
-            
-    
-    
-    
-    
-    
-    
+   
     
     
     

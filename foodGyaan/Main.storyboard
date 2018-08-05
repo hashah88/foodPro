@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I7-Iy-krj">
                                 <rect key="frame" x="22" y="31" width="325" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95523184537887573" green="0.86275740423862357" blue="0.44688078841875545" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.35686274509803922" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Famous Food">
                                     <color key="titleColor" red="0.95523184537887573" green="0.2616875840171014" blue="0.21350481102229044" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.35686274509803922" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -82,37 +82,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Au-de-weg">
-                                <rect key="frame" x="22" y="390" width="329" height="38"/>
+                                <rect key="frame" x="25" y="346" width="299" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.086217619478702545" green="0.60850793123245239" blue="0.26560312509536743" alpha="0.48192671654929575" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Option1"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.90196078431372551" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Option1">
+                                    <color key="titleColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="tiw-WS-xpG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzK-6H-Fsn">
-                                <rect key="frame" x="22" y="445" width="329" height="39"/>
+                                <rect key="frame" x="25" y="404" width="330" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45201287883151559" green="0.80136797897556289" blue="0.59762396696372977" alpha="0.81593860035211263" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Option2"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.90196078431372551" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Option2">
+                                    <color key="titleColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="Acn-gD-Soo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI8-we-V5T">
-                                <rect key="frame" x="22" y="500" width="329" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.44018074301338017" green="0.80136797897556289" blue="0.60617124440479797" alpha="0.81593860035211263" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Option3"/>
-                                <connections>
-                                    <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="wz9-bb-whT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXr-xR-fCm">
-                                <rect key="frame" x="22" y="562" width="329" height="30"/>
+                                <rect key="frame" x="25" y="520" width="330" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.43844481910551975" green="0.80136797897556289" blue="0.61380837345174211" alpha="0.81593860035211263" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Option4"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.90196078431372551" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Option4">
+                                    <color key="titleColor" red="0.16078431372549018" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="8n1-AU-8qS"/>
                                 </connections>
@@ -131,7 +129,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meethu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K28-ri-8xD">
-                                <rect key="frame" x="24" y="72" width="335" height="310"/>
+                                <rect key="frame" x="24" y="72" width="327" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-nS-otc">
@@ -145,15 +143,65 @@
                                     <action selector="NextButton:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="eQg-dM-dCA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYO-Tg-8Ad">
+                                <rect key="frame" x="54" y="576" width="218" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX9-a3-9cd">
+                                <rect key="frame" x="88" y="547" width="158" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI8-we-V5T">
+                                <rect key="frame" x="25" y="462" width="330" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.90196078431372551" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Option3">
+                                    <color key="titleColor" red="0.16078431372549018" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="OptionsSelected:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="wz9-bb-whT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfK-J4-ftV" customClass="DOFavoriteButton" customModule="foodGyaan" customModuleProvider="target">
+                                <rect key="frame" x="328" y="351" width="37" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="like"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" red="0.23529411759999999" green="0.7839006696428571" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="1" green="0.85191965459999996" blue="0.052533982520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageColorOff">
+                                        <color key="value" red="0.95523184539999995" green="0.57637832609999995" blue="0.51323561470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
+                                        <color key="value" red="0.81568627449999997" green="0.92549019610000005" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.35686274509803922" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kul-CC-38v"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="mIR-QP-aHX"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="Comment" destination="LX9-a3-9cd" id="3c7-R0-Vbm"/>
                         <outlet property="FoodImageView" destination="K28-ri-8xD" id="mz9-vo-t8Z"/>
+                        <outlet property="Like" destination="gfK-J4-ftV" id="sOL-gf-hLQ"/>
+                        <outlet property="Score" destination="mYO-Tg-8Ad" id="MWS-df-JFJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEG-x2-9O6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,6 +210,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="like" width="128" height="128"/>
         <image name="meethu.jpg" width="616" height="462"/>
     </resources>
 </document>

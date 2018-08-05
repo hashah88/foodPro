@@ -55,6 +55,9 @@
 		23B183B9210E6BF700309AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B18389210E6BF700309AA4 /* ViewController.swift */; };
 		23B183BA210E6BF700309AA4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1838A210E6BF700309AA4 /* QuizViewController.swift */; };
 		23B183BB210E6BF700309AA4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23B1838B210E6BF700309AA4 /* Info.plist */; };
+		23DD7C1A21166A4D00199B2B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD7C1921166A4D00199B2B /* Extensions.swift */; };
+		23DD7C1C2117772800199B2B /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD7C1B2117772800199B2B /* DOFavoriteButton.swift */; };
+		EFBBFCDADA89E873B47E1812 /* Pods_foodGyaan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEE89000026AFBF55D2243A /* Pods_foodGyaan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +111,11 @@
 		23B18389210E6BF700309AA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23B1838A210E6BF700309AA4 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		23B1838B210E6BF700309AA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23DD7C1921166A4D00199B2B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		23DD7C1B2117772800199B2B /* DOFavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOFavoriteButton.swift; sourceTree = "<group>"; };
+		E1962802D086E2E009E139E5 /* Pods-foodGyaan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodGyaan.release.xcconfig"; path = "Pods/Target Support Files/Pods-foodGyaan/Pods-foodGyaan.release.xcconfig"; sourceTree = "<group>"; };
+		EBEE89000026AFBF55D2243A /* Pods_foodGyaan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodGyaan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F451BA68A998CF286F5C6ABA /* Pods-foodGyaan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodGyaan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foodGyaan/Pods-foodGyaan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFBBFCDADA89E873B47E1812 /* Pods_foodGyaan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +135,8 @@
 			children = (
 				23B18354210E6BF700309AA4 /* foodGyaan */,
 				2388F76D2105456A007F85DF /* Products */,
+				D7085B943B010388B9E87EC1 /* Pods */,
+				2B932DB5C39A6E012C041258 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +159,8 @@
 				23B18387210E6BF700309AA4 /* AppDelegate.swift */,
 				23B18388210E6BF700309AA4 /* Controllers */,
 				23B1838B210E6BF700309AA4 /* Info.plist */,
+				23DD7C1921166A4D00199B2B /* Extensions.swift */,
+				23DD7C1B2117772800199B2B /* DOFavoriteButton.swift */,
 			);
 			path = foodGyaan;
 			sourceTree = "<group>";
@@ -241,6 +254,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		2B932DB5C39A6E012C041258 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE89000026AFBF55D2243A /* Pods_foodGyaan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7085B943B010388B9E87EC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F451BA68A998CF286F5C6ABA /* Pods-foodGyaan.debug.xcconfig */,
+				E1962802D086E2E009E139E5 /* Pods-foodGyaan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2388F77E2105456C007F85DF /* Build configuration list for PBXNativeTarget "foodGyaan" */;
 			buildPhases = (
+				FBBCB041A68B0219AC665F5E /* [CP] Check Pods Manifest.lock */,
 				2388F7682105456A007F85DF /* Sources */,
 				2388F7692105456A007F85DF /* Frameworks */,
 				2388F76A2105456A007F85DF /* Resources */,
@@ -349,6 +380,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FBBCB041A68B0219AC665F5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-foodGyaan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2388F7682105456A007F85DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -357,6 +409,8 @@
 				23B183B9210E6BF700309AA4 /* ViewController.swift in Sources */,
 				23B183B8210E6BF700309AA4 /* AppDelegate.swift in Sources */,
 				23B183BA210E6BF700309AA4 /* QuizViewController.swift in Sources */,
+				23DD7C1C2117772800199B2B /* DOFavoriteButton.swift in Sources */,
+				23DD7C1A21166A4D00199B2B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +533,7 @@
 		};
 		2388F77F2105456C007F85DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F451BA68A998CF286F5C6ABA /* Pods-foodGyaan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +551,7 @@
 		};
 		2388F7802105456C007F85DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1962802D086E2E009E139E5 /* Pods-foodGyaan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
