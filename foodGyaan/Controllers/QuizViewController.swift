@@ -25,7 +25,7 @@ class QuizViewController: UIViewController {
     var score = 0;
     var optionBtnTags  = [10,11,12,13];
     var optionBtns = [UIButton]()
-    
+    var cheerBtnTags = [10 : 1, 11 : 2, 12 : 3, 13: 4]
     
     @IBOutlet weak var Like: DOFavoriteButton!
     
@@ -33,6 +33,9 @@ class QuizViewController: UIViewController {
     
     @IBAction func NextButton(_ sender: UIButton) {
         Comment.text = " "
+        changeBtnUI()
+        enableOrDisableBtns(disable: false)
+        hideCheerBtns()
         displayNextImage()
     }
     
@@ -42,7 +45,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var FoodImageView: UIImageView!
     
     @IBAction func OptionsSelected(_ sender: UIButton) {
-       let userAns = sender.title(for: .normal)
+        let userAns = sender.title(for: .normal)
         checkAns(userAns: userAns!,userAnsBtnTag: sender.tag )
     }
     
@@ -59,10 +62,11 @@ class QuizViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        Like.addTarget(self, action: Selector(("tapped:")), for: .touchUpInside)
+        
         print("Hey I am in Quiz View")
         print (category)
-        createOptionBtnArr();
+        hideCheerBtns()
+        createOptionBtnArr()
         changeBtnUI()
         setSelectedCatNames()
         selectedCatNames = shuffleTheArray(input : selectedCatNames)
@@ -75,32 +79,23 @@ class QuizViewController: UIViewController {
     
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    func tapped(sender: DOFavoriteButton) {
-        if sender.isSelected {
-            // deselect
-            sender.deselect()
-        } else {
-            // select with animation
-            sender.select()
-        }
-    }
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     
     
     
@@ -108,7 +103,7 @@ class QuizViewController: UIViewController {
     func setSelectedCatNames(){
         if (category == "famousFood"){
             selectedCatNames = famousFoodNames
-            }
+        }
         else if (category == "fruits"){
             selectedCatNames = fruitsNames
         }
@@ -148,32 +143,33 @@ class QuizViewController: UIViewController {
             setOptions();
         }
         else {
+            UserDefaults.standard.set(score, forKey: category) 
             self.dismiss(animated: true, completion: nil)
         }
     }
-            
-            
-            
+    
+    
+    
     //MARK: setOptions()
     
     func setOptions(){
-            var randomBtnTags = optionBtnTags
-            var randomOptions = [selectedCatNames[imageNum]]
+        var randomBtnTags = optionBtnTags
+        var randomOptions = [selectedCatNames[imageNum]]
         
         for _ in 1...3{
             let option = getRandomName(isPresent: randomOptions)
             randomOptions.append(option)
         }
-
+        
         randomOptions = shuffleTheArray(input: randomOptions)
         randomBtnTags = shuffleTheArray(input: randomBtnTags)
         print(randomOptions)
         print(randomBtnTags)
         for i in 0...3{
-                let btn = self.view.viewWithTag(randomBtnTags[i]) as? UIButton
-                    btn?.setTitle(randomOptions[i], for: .normal)
+            let btn = self.view.viewWithTag(randomBtnTags[i]) as? UIButton
+            btn?.setTitle(randomOptions[i], for: .normal)
         }
-            
+        
     }
     
     
@@ -196,25 +192,29 @@ class QuizViewController: UIViewController {
     
     // MARK : checkAns()
     func checkAns (userAns : String , userAnsBtnTag : Int)->Void{
+        
         if (userAns == selectedCatNames[imageNum]){
-            Comment.text = "GOOD JOB!!"
             score = score + 1;
-          
+              enableOrDisableBtns(disable: true)
+             let btn = self.view.viewWithTag(userAnsBtnTag) as? UIButton
+            btn?.backgroundColor = UIColor(hexFromString: "#B1D3C3")
+            let tagNo = cheerBtnTags[userAnsBtnTag]
+            let showCheerBtn = self.view.viewWithTag(tagNo!) as? DOFavoriteButton
+            showCheerBtn?.isHidden = false
+            showCheerBtn?.select()
             Score.text = "Current Score : \(score)"
             
         }
         else {
-            Comment.text = "It is Okay. Just keep trying"
-            // disable the other buttons
-            // animate the right button
-            // find the right button
             var btnToAnimate = UIButton()
             for i in optionBtnTags{
                 let btn = self.view.viewWithTag(i) as? UIButton
-                if (btn?.title(for: .normal) == selectedCatNames[imageNum]){
+                if (btn?.title(for: .disabled) == selectedCatNames[imageNum]){
                     btnToAnimate = btn!
+                    print("the button to animate's tag is")
+                    print (btnToAnimate.tag)
                 }
-        }
+            }
             
             UIButton.animate(withDuration: 0.2, animations: {
                 for btn in self.optionBtns {
@@ -225,11 +225,11 @@ class QuizViewController: UIViewController {
                         btn.backgroundColor = UIColor(hexFromString: "#B1D3C3")
                     }
                 }
-//                btnToAnimate.backgroundColor = UIColor(hexFromString: "#B1D3C3")
+                print("In the animation")
                 btnToAnimate.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             })
             
-    }
+        }
     }
     
     //MARK : cheerUserUp();
@@ -237,18 +237,22 @@ class QuizViewController: UIViewController {
     
     //MARK  : changeBtnUI();
     func changeBtnUI(){
+         let y = [346,404,462,520]
+        var index = 0;
         for i in optionBtnTags{
-             let btn = self.view.viewWithTag(i) as? UIButton
-             btn?.layer.borderWidth = 2.0
+            let btn = self.view.viewWithTag(i) as? UIButton
+            btn?.frame = CGRect(x: 25, y: y[index], width: 330, height: 50)
+            btn?.backgroundColor = UIColor(hexFromString: "#DAE6E8")
+            btn?.layer.borderWidth = 2.0
             btn?.layer.cornerRadius = (btn?.bounds.size.height)!/2
-             btn?.clipsToBounds = true
+            btn?.clipsToBounds = true
             btn?.layer.shadowOffset = CGSize(width: 3, height: 5)
             btn?.layer.shadowColor = UIColor(hexFromString: "#C0C0C0").cgColor
             btn?.layer.shadowRadius = 2
             btn?.layer.shadowOpacity = 1.0
             btn?.layer.masksToBounds = false
-             btn?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-            
+            btn?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            index = index + 1
         }
     }
     
@@ -257,22 +261,42 @@ class QuizViewController: UIViewController {
         for i in optionBtnTags{
             let btn = self.view.viewWithTag(i) as? UIButton
             optionBtns.append(btn!)
+        }
+        
+    }
+    
+    //MARK : hideCheerBtns
+    func hideCheerBtns(){
+        let btns = getCheerBtns()
+        for btn in btns {
+            btn.isHidden = true
+        }
+        
+        
+    }
+    
+    //MARK : getCheerBtns
+    func getCheerBtns() -> [DOFavoriteButton]{
+        var btns = [DOFavoriteButton]()
+        for i in 1...4 {
+            let btn = self.view.viewWithTag(i) as? DOFavoriteButton
+            btns.append(btn!)
+        }
+        return btns
+        
+    }
+    
+    // MARK : disableBtns()
+    func enableOrDisableBtns (disable : Bool){
+        for btn in optionBtns{
+            if (disable){
+                btn.isEnabled = false
+        }
+            else {
+                btn.isEnabled = true
+            }
     }
     }
-    
-    
-    
-    
-    
-    
-    
- 
-    
-            
-   
-    
-    
-    
 }
 
 

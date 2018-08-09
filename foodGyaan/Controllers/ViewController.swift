@@ -14,8 +14,16 @@ class ViewController: UIViewController {
    let categoryNames = ["famousFood", "fruits","vegetables","spices"]
     var categorySelected : String = ""
     
+    @IBOutlet weak var famousFoodScore: UILabel!
+    @IBOutlet weak var fruitsScore: UILabel!
+    @IBOutlet weak var spicesScore: UILabel!
+    @IBOutlet weak var vegetablesScore: UILabel!
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //Your Code Here...
+        updateScores();
+    }
     
     @IBAction func CategorySelected(_ sender: UIButton) {
    categorySelected = categoryNames[sender.tag]
@@ -47,7 +55,21 @@ class ViewController: UIViewController {
             
         }
     }
-
+    
+    func updateScores(){
+        print ( "Hey I entered and will be displaying the default values")
+        let score1 = UserDefaults.standard.integer(forKey: "famousFood")
+        let score2 = UserDefaults.standard.integer(forKey: "fruits")
+        let score3 = UserDefaults.standard.integer(forKey: "vegetables")
+        let score4 = UserDefaults.standard.integer(forKey: "spices")
+        print ("I am printing the scores")
+        print(score1)
+        print (score2)
+        famousFoodScore.text = "Score : \(score1)"
+        fruitsScore.text = "Score : \(score2)"
+        vegetablesScore.text = "Score : \(score3)"
+        spicesScore.text = "Score : \(score4)"
+    }
 
 }
 
