@@ -57,6 +57,7 @@
 		23B183BB210E6BF700309AA4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23B1838B210E6BF700309AA4 /* Info.plist */; };
 		23DD7C1A21166A4D00199B2B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD7C1921166A4D00199B2B /* Extensions.swift */; };
 		23DD7C1C2117772800199B2B /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD7C1B2117772800199B2B /* DOFavoriteButton.swift */; };
+		23DD7C21211CC03300199B2B /* ModalViewBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23DD7C20211CC03300199B2B /* ModalViewBackground.jpg */; };
 		EFBBFCDADA89E873B47E1812 /* Pods_foodGyaan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEE89000026AFBF55D2243A /* Pods_foodGyaan.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		23B1838B210E6BF700309AA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23DD7C1921166A4D00199B2B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		23DD7C1B2117772800199B2B /* DOFavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOFavoriteButton.swift; sourceTree = "<group>"; };
+		23DD7C20211CC03300199B2B /* ModalViewBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ModalViewBackground.jpg; sourceTree = "<group>"; };
 		E1962802D086E2E009E139E5 /* Pods-foodGyaan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodGyaan.release.xcconfig"; path = "Pods/Target Support Files/Pods-foodGyaan/Pods-foodGyaan.release.xcconfig"; sourceTree = "<group>"; };
 		EBEE89000026AFBF55D2243A /* Pods_foodGyaan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodGyaan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F451BA68A998CF286F5C6ABA /* Pods-foodGyaan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodGyaan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foodGyaan/Pods-foodGyaan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		23B18359210E6BF700309AA4 /* MyImages */ = {
 			isa = PBXGroup;
 			children = (
+				23DD7C1F211CBFF500199B2B /* Other */,
 				23B1835A210E6BF700309AA4 /* Vegetables */,
 				23B18363210E6BF700309AA4 /* FamousFood */,
 				23B18371210E6BF700309AA4 /* Fruits */,
@@ -252,6 +255,14 @@
 				23B1838A210E6BF700309AA4 /* QuizViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23DD7C1F211CBFF500199B2B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				23DD7C20211CC03300199B2B /* ModalViewBackground.jpg */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		2B932DB5C39A6E012C041258 /* Frameworks */ = {
@@ -364,6 +375,7 @@
 				23B183A5210E6BF700309AA4 /* Galeli.jpg in Resources */,
 				23B183A4210E6BF700309AA4 /* Limbu.jpg in Resources */,
 				23B183AE210E6BF700309AA4 /* Chapa.jpg in Resources */,
+				23DD7C21211CC03300199B2B /* ModalViewBackground.jpg in Resources */,
 				23B183BB210E6BF700309AA4 /* Info.plist in Resources */,
 				23B18390210E6BF700309AA4 /* Tindoora.jpg in Resources */,
 				23B18391210E6BF700309AA4 /* Bataka.jpg in Resources */,

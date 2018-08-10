@@ -28,9 +28,9 @@ class QuizViewController: UIViewController {
     var cheerBtnTags = [10 : 1, 11 : 2, 12 : 3, 13: 4]
     
     @IBOutlet weak var Like: DOFavoriteButton!
+    @IBAction func ClosePopUp(_ sender: UIButton) {
     
-    
-    
+    }
     @IBAction func NextButton(_ sender: UIButton) {
         Comment.text = " "
         changeBtnUI()
@@ -49,20 +49,38 @@ class QuizViewController: UIViewController {
         checkAns(userAns: userAns!,userAnsBtnTag: sender.tag )
     }
     
-    @IBOutlet weak var Comment: UILabel!
+  
+    @IBAction func exitFromQuiz(_ sender: UIButton) {
+        UserDefaults.standard.set(score, forKey: category)
+        self.dismiss(animated: true, completion: nil)
+    }
     
+    @IBAction func restartQuiz(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.labelForPopUp.alpha = 0
+            var newFrame = self.PopUpView.frame
+            newFrame.origin.x = -330
+            self.PopUpView.frame = newFrame
+        })
+        selectedCatNames = shuffleTheArray(input : selectedCatNames)
+        imageNum = -1
+        score = 0;
+        displayNextImage()
+    }
+    
+    @IBOutlet weak var labelForPopUp: UILabel!
+    @IBOutlet weak var PopUpView: UIView!
+    @IBOutlet weak var Comment: UILabel!
     @IBOutlet weak var Score: UILabel!
     
-    @IBAction func StopCheering(_ sender: UIButton) {
-        
-    }
+   
     
     
     
     
     
     override func viewDidLoad() {
-        
+       
         print("Hey I am in Quiz View")
         print (category)
         hideCheerBtns()
@@ -143,15 +161,15 @@ class QuizViewController: UIViewController {
             setOptions();
         }
         else {
-            UserDefaults.standard.set(score, forKey: category) 
-            self.dismiss(animated: true, completion: nil)
+            
+            showPopUp()
+
         }
     }
     
     
     
     //MARK: setOptions()
-    
     func setOptions(){
         var randomBtnTags = optionBtnTags
         var randomOptions = [selectedCatNames[imageNum]]
@@ -297,6 +315,26 @@ class QuizViewController: UIViewController {
             }
     }
     }
+    
+    //MARK : showPopUp()
+    func showPopUp(){
+        UIView.animate(withDuration: 0.4, animations: {
+            self.labelForPopUp.alpha = 1
+            let gradientLayer:CAGradientLayer = CAGradientLayer()
+            gradientLayer.frame.size = self.labelForPopUp.frame.size
+            let color1 = UIColor(hexFromString: "#ff8a70")
+            let color2 = UIColor(hexFromString: "#ffa48f")
+            let color3 = UIColor(hexFromString: "#f96772")
+            let color4 = UIColor(hexFromString: "#f9b9ab")
+            gradientLayer.colors = [color1.cgColor, color2.cgColor,color4.cgColor, UIColor.white.cgColor, color4.cgColor,color3.cgColor]
+            self.labelForPopUp.layer.addSublayer(gradientLayer)
+            var newFrame = self.PopUpView.frame
+            newFrame.origin.x = 49
+            self.PopUpView.frame = newFrame
+            })
+    }
+    
+    
 }
 
 
