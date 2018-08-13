@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230C9780211D5F7D009EDE7D /* Classess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C977F211D5F7D009EDE7D /* Classess.swift */; };
 		23B1838C210E6BF700309AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B18355210E6BF700309AA4 /* LaunchScreen.storyboard */; };
 		23B1838D210E6BF700309AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B18357210E6BF700309AA4 /* Assets.xcassets */; };
 		23B1838E210E6BF700309AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B18358210E6BF700309AA4 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230C977F211D5F7D009EDE7D /* Classess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classess.swift; sourceTree = "<group>"; };
 		2388F76C2105456A007F85DF /* foodGyaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodGyaan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B18355210E6BF700309AA4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23B18356210E6BF700309AA4 /* TryItHere.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TryItHere.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -132,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230C977E211D5F4F009EDE7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				230C977F211D5F7D009EDE7D /* Classess.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2388F7632105456A007F85DF = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		23B18354210E6BF700309AA4 /* foodGyaan */ = {
 			isa = PBXGroup;
 			children = (
+				230C977E211D5F4F009EDE7D /* Model */,
 				23B18355210E6BF700309AA4 /* LaunchScreen.storyboard */,
 				23B18356210E6BF700309AA4 /* TryItHere.playground */,
 				23B18357210E6BF700309AA4 /* Assets.xcassets */,
@@ -293,6 +304,7 @@
 				2388F7682105456A007F85DF /* Sources */,
 				2388F7692105456A007F85DF /* Frameworks */,
 				2388F76A2105456A007F85DF /* Resources */,
+				CB1592C6295BF6FAC0AD0EA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,6 +405,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CB1592C6295BF6FAC0AD0EA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-foodGyaan/Pods-foodGyaan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodGyaan/Pods-foodGyaan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FBBCB041A68B0219AC665F5E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230C9780211D5F7D009EDE7D /* Classess.swift in Sources */,
 				23B183B9210E6BF700309AA4 /* ViewController.swift in Sources */,
 				23B183B8210E6BF700309AA4 /* AppDelegate.swift in Sources */,
 				23B183BA210E6BF700309AA4 /* QuizViewController.swift in Sources */,

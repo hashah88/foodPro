@@ -15,95 +15,253 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="foodGyaan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1005"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I7-Iy-krj">
-                                <rect key="frame" x="22" y="31" width="321" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.73964941501617432" green="0.58599221940040314" blue="0.72427637988946048" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Famous Food">
-                                    <color key="titleColor" red="0.95523184537887573" green="0.2616875840171014" blue="0.21350481102229044" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" red="0.76725561320843261" green="0.66799665178571432" blue="0.66875771763340153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="CategorySelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OIL-I8-Xdh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOj-Zd-nc3">
-                                <rect key="frame" x="18" y="162" width="325" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80433738916512942" green="0.68034838613344117" blue="0.95523184537887573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Fruits"/>
-                                <connections>
-                                    <action selector="CategorySelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xF-89-Ujm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-Wc-OzR">
-                                <rect key="frame" x="20" y="302" width="325" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84391241689750718" green="0.95523184537887573" blue="0.23729645991208373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Vegetables"/>
-                                <connections>
-                                    <action selector="CategorySelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWM-dv-12e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aL-c1-O9w">
-                                <rect key="frame" x="21" y="417" width="326" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95523184537887573" green="0.57637832608242212" blue="0.51323561467917533" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Spices"/>
-                                <connections>
-                                    <action selector="CategorySelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejg-xs-0TX"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-hi-Ik7">
-                                <rect key="frame" x="42" y="119" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKg-kd-MCR">
-                                <rect key="frame" x="51" y="234" width="131" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKg-nC-KUM">
-                                <rect key="frame" x="44" y="365" width="149" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score :0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJA-lv-ljr">
-                                <rect key="frame" x="42" y="480" width="140" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-Ll-47G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="985"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqH-ew-ujy">
+                                        <rect key="frame" x="0.0" y="-54" width="375" height="1005"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zf-uj-uTo" userLabel="FamousFoodCard" customClass="MDCCard">
+                                                <rect key="frame" x="31" y="86" width="313" height="183"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Famous Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JY7-fB-98K">
+                                                        <rect key="frame" x="71" y="8" width="329" height="43"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore some of the most famous " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCb-d4-Io5">
+                                                        <rect key="frame" x="12" y="59" width="301" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mm3-Sx-QGx">
+                                                        <rect key="frame" x="31" y="141" width="77" height="42"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMJ-As-qaZ">
+                                                        <rect key="frame" x="219" y="147" width="57" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="QUIZ">
+                                                            <color key="titleColor" red="1" green="0.0078431372549019607" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="QuizBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNb-rE-KFl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="flavorsome dishes." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcv-LR-srj">
+                                                        <rect key="frame" x="8" y="99" width="255" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.87843137250000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zaz-eO-WSv" customClass="MDCCard">
+                                                <rect key="frame" x="32" y="291" width="313" height="183"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-iZ-2aU">
+                                                        <rect key="frame" x="26" y="133" width="77" height="42"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWI-tl-MWS">
+                                                        <rect key="frame" x="229" y="133" width="59" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="QUIZ">
+                                                            <color key="titleColor" red="1" green="0.0078431372549019607" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="QuizBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MdR-XU-ono"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fruits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-t7-Sf7">
+                                                        <rect key="frame" x="83" y="33" width="205" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="names of the fruits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTp-7W-DiW">
+                                                        <rect key="frame" x="20" y="102" width="169" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Familiarize yourself with Gujarati " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O6-F5-lp1">
+                                                        <rect key="frame" x="20" y="66" width="305" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.50196078431372548" green="0.87058823529411766" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pne-qD-f4S" customClass="MDCCard">
+                                                <rect key="frame" x="32" y="505" width="313" height="183"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegetables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNq-de-dRm">
+                                                        <rect key="frame" x="66" y="8" width="148" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Familiarize yourself with Gujarati " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7a-YC-IZ8">
+                                                        <rect key="frame" x="21" y="61" width="281" height="23"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWK-Nv-ddG">
+                                                        <rect key="frame" x="21" y="154" width="69" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyq-bD-a83">
+                                                        <rect key="frame" x="242" y="138" width="56" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="QUIZ">
+                                                            <color key="titleColor" red="1" green="0.0078431372550000003" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="QuizBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QsE-O9-FYs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="names of vegetables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Im-oS-aJv">
+                                                        <rect key="frame" x="21" y="92" width="177" height="23"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weJ-mw-Svk" customClass="MDCCard">
+                                                <rect key="frame" x="31" y="707" width="313" height="183"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pO-CC-3Cw">
+                                                        <rect key="frame" x="109" y="18" width="89" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spices are the heart of Indian " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3g-dk-g3k">
+                                                        <rect key="frame" x="16" y="71" width="255" height="23"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3N-fO-OdR">
+                                                        <rect key="frame" x="16" y="154" width="69" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6M-5B-KXE">
+                                                        <rect key="frame" x="240" y="145" width="58" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="QUIZ">
+                                                            <color key="titleColor" red="1" green="0.0078431372550000003" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="QuizBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwz-ZD-qZJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cuisines. Then, why not learn it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3X-oz-xzS">
+                                                        <rect key="frame" x="16" y="97" width="272" height="23"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.50196078431372548" green="0.87058823529411766" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="900" id="32M-W5-TRn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AqH-ew-ujy" secondAttribute="bottom" id="HB3-Mv-c0G"/>
+                                    <constraint firstItem="AqH-ew-ujy" firstAttribute="leading" secondItem="BYf-Ll-47G" secondAttribute="leading" id="LMU-fV-SSv"/>
+                                    <constraint firstItem="AqH-ew-ujy" firstAttribute="top" secondItem="BYf-Ll-47G" secondAttribute="top" id="Lyl-MI-7sA"/>
+                                    <constraint firstAttribute="trailing" secondItem="AqH-ew-ujy" secondAttribute="trailing" id="wYe-pj-Rab"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.23529411764705882" green="0.35686274509803922" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BYf-Ll-47G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5Pc-XT-p8f"/>
+                            <constraint firstItem="BYf-Ll-47G" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EqI-yv-SLM"/>
+                            <constraint firstItem="BYf-Ll-47G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YFO-eE-VE3"/>
+                            <constraint firstItem="BYf-Ll-47G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ynz-4t-foE"/>
+                            <constraint firstItem="AqH-ew-ujy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="eZq-fL-7mU"/>
+                            <constraint firstItem="AqH-ew-ujy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="mVg-v4-dZ9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1005"/>
                     <connections>
-                        <outlet property="famousFoodScore" destination="k8a-hi-Ik7" id="F2p-8T-oCc"/>
-                        <outlet property="fruitsScore" destination="sKg-kd-MCR" id="R68-jn-5ZJ"/>
-                        <outlet property="spicesScore" destination="qJA-lv-ljr" id="Gzk-0p-HJn"/>
-                        <outlet property="vegetablesScore" destination="lKg-nC-KUM" id="e31-WU-ZAK"/>
+                        <outletCollection property="CategoriesCard" destination="0zf-uj-uTo" collectionClass="NSMutableArray" id="yo7-af-FVw"/>
+                        <outletCollection property="CategoriesCard" destination="Zaz-eO-WSv" collectionClass="NSMutableArray" id="WEy-hw-oQw"/>
+                        <outletCollection property="CategoriesCard" destination="pne-qD-f4S" collectionClass="NSMutableArray" id="JKZ-ir-H6a"/>
+                        <outletCollection property="CategoriesCard" destination="weJ-mw-Svk" collectionClass="NSMutableArray" id="pzH-9d-htA"/>
+                        <outletCollection property="DescriptionLabels" destination="mCb-d4-Io5" collectionClass="NSMutableArray" id="rcT-TM-Zud"/>
+                        <outletCollection property="DescriptionLabels" destination="Pcv-LR-srj" collectionClass="NSMutableArray" id="1BP-1s-36J"/>
+                        <outletCollection property="DescriptionLabels" destination="0O6-F5-lp1" collectionClass="NSMutableArray" id="uh9-lU-xAZ"/>
+                        <outletCollection property="DescriptionLabels" destination="cTp-7W-DiW" collectionClass="NSMutableArray" id="UIe-NB-sjt"/>
+                        <outletCollection property="DescriptionLabels" destination="L7a-YC-IZ8" collectionClass="NSMutableArray" id="Zrf-7I-dGp"/>
+                        <outletCollection property="DescriptionLabels" destination="9Im-oS-aJv" collectionClass="NSMutableArray" id="38f-rW-Xey"/>
+                        <outletCollection property="DescriptionLabels" destination="r3g-dk-g3k" collectionClass="NSMutableArray" id="GQY-vG-KIu"/>
+                        <outletCollection property="DescriptionLabels" destination="j3X-oz-xzS" collectionClass="NSMutableArray" id="5Ro-4r-O7J"/>
+                        <outletCollection property="ScoreLabels" destination="Mm3-Sx-QGx" collectionClass="NSMutableArray" id="dmF-4T-6ai"/>
+                        <outletCollection property="ScoreLabels" destination="wb4-iZ-2aU" collectionClass="NSMutableArray" id="QiE-b0-GOo"/>
+                        <outletCollection property="ScoreLabels" destination="rWK-Nv-ddG" collectionClass="NSMutableArray" id="030-bi-eMO"/>
+                        <outletCollection property="ScoreLabels" destination="C3N-fO-OdR" collectionClass="NSMutableArray" id="IYC-Lp-jLV"/>
+                        <outletCollection property="QuizBtns" destination="FMJ-As-qaZ" collectionClass="NSMutableArray" id="QNL-Nr-IC3"/>
+                        <outletCollection property="QuizBtns" destination="ZWI-tl-MWS" collectionClass="NSMutableArray" id="mgU-aO-9eE"/>
+                        <outletCollection property="QuizBtns" destination="Iyq-bD-a83" collectionClass="NSMutableArray" id="cL3-mI-dx4"/>
+                        <outletCollection property="QuizBtns" destination="e6M-5B-KXE" collectionClass="NSMutableArray" id="dHJ-eB-oVd"/>
                         <segue destination="Akv-Zj-Vci" kind="presentation" identifier="goToQuiz" id="g3q-e4-HVt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-80.799999999999997" y="130.88455772113943"/>
         </scene>
         <!--Title-->
         <scene sceneID="j44-cE-hbm">
@@ -150,10 +308,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVE-Lw-IcF">
                                 <rect key="frame" x="46" y="28" width="77" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.85191965461245878" blue="0.05253398252304009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.26452464788732394" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="tintColor" red="0.95523184539999995" green="0.26168758399999997" blue="0.21350481099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="CLOSE">
-                                    <color key="titleColor" red="0.21128157383419688" green="0.02716117166833211" blue="0.013535494310877741" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="1" green="0.0078431372549019607" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -167,26 +326,20 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-nS-otc">
                                 <rect key="frame" x="250" y="28" width="74" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95573591321243523" green="0.78484085979652807" blue="0.18319073094773741" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.31" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="NEXT">
-                                    <color key="titleColor" red="0.10352574481865284" green="0.012381322982657284" blue="0.023676323646059802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="1" green="0.0078431372549019607" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="NextButton:" destination="Akv-Zj-Vci" eventType="touchUpInside" id="eQg-dM-dCA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYO-Tg-8Ad">
-                                <rect key="frame" x="54" y="576" width="218" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYO-Tg-8Ad">
+                                <rect key="frame" x="54" y="587" width="194" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX9-a3-9cd">
-                                <rect key="frame" x="88" y="547" width="158" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.0078431372550000003" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI8-we-V5T">
@@ -300,14 +453,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VW-2c-vVa">
-                                <rect key="frame" x="0.0" y="-2" width="454" height="765"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.52591476408980409" green="0.82159070535400902" blue="0.85814038212435229" alpha="0.34198943661971831" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oZt-UN-TQS">
                                 <rect key="frame" x="-330" y="162" width="331" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -363,15 +508,29 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.9941860465116279" green="0.98837209302325579" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VW-2c-vVa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.30988666373239437" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5186941964285714" green="0.87843137250000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.23529411764705882" green="0.35686274509803922" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6VW-2c-vVa" firstAttribute="top" secondItem="igV-B0-eGn" secondAttribute="top" id="0zB-Hu-dyl"/>
+                            <constraint firstItem="6VW-2c-vVa" firstAttribute="width" secondItem="igV-B0-eGn" secondAttribute="width" id="1mC-wk-lzf"/>
+                            <constraint firstItem="6VW-2c-vVa" firstAttribute="trailing" secondItem="kul-CC-38v" secondAttribute="trailing" id="UZQ-9I-DhF"/>
+                            <constraint firstItem="6VW-2c-vVa" firstAttribute="height" secondItem="igV-B0-eGn" secondAttribute="height" id="cdV-OQ-PNi"/>
+                            <constraint firstAttribute="bottom" secondItem="6VW-2c-vVa" secondAttribute="bottom" id="sTx-Ju-XRw"/>
+                            <constraint firstItem="6VW-2c-vVa" firstAttribute="leading" secondItem="kul-CC-38v" secondAttribute="leading" id="xS5-ez-T3P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kul-CC-38v"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="mIR-QP-aHX"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="Comment" destination="LX9-a3-9cd" id="3c7-R0-Vbm"/>
                         <outlet property="FoodImageView" destination="K28-ri-8xD" id="mz9-vo-t8Z"/>
                         <outlet property="PopUpView" destination="oZt-UN-TQS" id="LOB-1s-mPc"/>
                         <outlet property="Score" destination="mYO-Tg-8Ad" id="MWS-df-JFJ"/>

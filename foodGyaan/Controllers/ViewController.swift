@@ -7,45 +7,41 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
+import MaterialComponents.MaterialAppBar
 
 class ViewController: UIViewController {
     
     //Declare all the variables here
-   let categoryNames = ["famousFood", "fruits","vegetables","spices"]
+    let categoryNames = ["famousFood", "fruits","vegetables","spices"]
     var categorySelected : String = ""
     
-    @IBOutlet weak var famousFoodScore: UILabel!
-    @IBOutlet weak var fruitsScore: UILabel!
-    @IBOutlet weak var spicesScore: UILabel!
-    @IBOutlet weak var vegetablesScore: UILabel!
+    @IBOutlet var CategoriesCard: [MDCCard]!
+    @IBOutlet var DescriptionLabels: [UILabel]!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //Your Code Here...
-        updateScores();
-    }
-    
-    @IBAction func CategorySelected(_ sender: UIButton) {
-   categorySelected = categoryNames[sender.tag]
+    @IBAction func QuizBtnPressed(_ sender: UIButton) {
+        print(sender.tag)
+        categorySelected = categoryNames[sender.tag]
         performSegue(withIdentifier: "goToQuiz", sender: self)
     }
     
+    @IBOutlet var ScoreLabels: [UILabel]!
+    @IBOutlet var QuizBtns: [UIButton]!
     
     
     
     
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateScores()
+    }
     
     
     override func viewDidLoad() {
+        changeCardsUI()
+        createAppBar()
+        addBtnsBorder()
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,19 +53,50 @@ class ViewController: UIViewController {
     }
     
     func updateScores(){
-        print ( "Hey I entered and will be displaying the default values")
-        let score1 = UserDefaults.standard.integer(forKey: "famousFood")
-        let score2 = UserDefaults.standard.integer(forKey: "fruits")
-        let score3 = UserDefaults.standard.integer(forKey: "vegetables")
-        let score4 = UserDefaults.standard.integer(forKey: "spices")
-        print ("I am printing the scores")
-        print(score1)
-        print (score2)
-        famousFoodScore.text = "Score : \(score1)"
-        fruitsScore.text = "Score : \(score2)"
-        vegetablesScore.text = "Score : \(score3)"
-        spicesScore.text = "Score : \(score4)"
+        let keys = ["famousFood","fruits","vegetables","spices"]
+        for (index, scorelabel) in ScoreLabels.enumerated() {
+            let score = UserDefaults.standard.integer(forKey: keys[index])
+            scorelabel.text = "Score : \(score)"
+        }
     }
-
+    
+    
+    func createAppBar () {
+        let appBar = MDCAppBar()
+        self.addChildViewController(appBar.headerViewController)
+        appBar.headerViewController.headerView.backgroundColor = UIColor(hexFromString: "#FF0266")
+        appBar.addSubviewsToParent()
+        appBar.navigationBar.titleTextColor = UIColor.white
+        appBar.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20, weight: .heavy)] 
+        title = "Categories"
+        
+    }
+    
+    func addBtnsBorder () {
+        for btn in QuizBtns {
+            print(btn.tag)
+            btn.layer.shadowOffset = CGSize(width: 3, height: 2)
+            btn.layer.shadowColor = UIColor(hexFromString: "#C0C0C0").cgColor
+            btn.layer.shadowRadius = 1
+            btn.layer.shadowOpacity = 1.0
+            btn.layer.masksToBounds = false
+        }
+    }
+    
+    func changeCardsUI (){
+        var borderClrs = [UIColor]()
+        borderClrs.append(UIColor(hexFromString: "#1b0000"))
+        borderClrs.append(UIColor(hexFromString: "#1b0000"))
+        borderClrs.append(UIColor(hexFromString: "#1b0000"))
+        borderClrs.append(UIColor(hexFromString: "#1b0000"))
+        var index = 0;
+        for  cards in  CategoriesCard {
+            cards.setShadowElevation(ShadowElevation(rawValue: 9.0), for: .normal)
+            cards.setShadowColor(borderClrs[index], for: .normal)
+            index = index + 1;
+        }
+    }
+    
+    
 }
 

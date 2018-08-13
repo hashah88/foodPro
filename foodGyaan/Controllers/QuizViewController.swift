@@ -32,7 +32,7 @@ class QuizViewController: UIViewController {
     
     }
     @IBAction func NextButton(_ sender: UIButton) {
-        Comment.text = " "
+//        Comment.text = " "
         changeBtnUI()
         enableOrDisableBtns(disable: false)
         hideCheerBtns()
@@ -40,6 +40,7 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func ExitButton(_ sender: UIButton) {
+        UserDefaults.standard.set(score, forKey: category)
         self.dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var FoodImageView: UIImageView!
@@ -243,8 +244,6 @@ class QuizViewController: UIViewController {
                         btn.backgroundColor = UIColor(hexFromString: "#B1D3C3")
                     }
                 }
-                print("In the animation")
-                btnToAnimate.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             })
             
         }
@@ -261,7 +260,7 @@ class QuizViewController: UIViewController {
             let btn = self.view.viewWithTag(i) as? UIButton
             btn?.frame = CGRect(x: 25, y: y[index], width: 330, height: 50)
             btn?.backgroundColor = UIColor(hexFromString: "#DAE6E8")
-            btn?.layer.borderWidth = 2.0
+
             btn?.layer.cornerRadius = (btn?.bounds.size.height)!/2
             btn?.clipsToBounds = true
             btn?.layer.shadowOffset = CGSize(width: 3, height: 5)
@@ -318,7 +317,7 @@ class QuizViewController: UIViewController {
     
     //MARK : showPopUp()
     func showPopUp(){
-        UIView.animate(withDuration: 0.4, animations: {
+        UIView.animate(withDuration: 0.2, animations: {
             self.labelForPopUp.alpha = 1
             let gradientLayer:CAGradientLayer = CAGradientLayer()
             gradientLayer.frame.size = self.labelForPopUp.frame.size
