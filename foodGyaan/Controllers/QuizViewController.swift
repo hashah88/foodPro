@@ -29,10 +29,9 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var Like: DOFavoriteButton!
     @IBAction func ClosePopUp(_ sender: UIButton) {
-    
+        
     }
     @IBAction func NextButton(_ sender: UIButton) {
-//        Comment.text = " "
         changeBtnUI()
         enableOrDisableBtns(disable: false)
         hideCheerBtns()
@@ -50,7 +49,7 @@ class QuizViewController: UIViewController {
         checkAns(userAns: userAns!,userAnsBtnTag: sender.tag )
     }
     
-  
+    
     @IBAction func exitFromQuiz(_ sender: UIButton) {
         UserDefaults.standard.set(score, forKey: category)
         self.dismiss(animated: true, completion: nil)
@@ -74,16 +73,13 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var Comment: UILabel!
     @IBOutlet weak var Score: UILabel!
     
-   
+    
     
     
     
     
     
     override func viewDidLoad() {
-       
-        print("Hey I am in Quiz View")
-        print (category)
         hideCheerBtns()
         createOptionBtnArr()
         changeBtnUI()
@@ -164,7 +160,7 @@ class QuizViewController: UIViewController {
         else {
             
             showPopUp()
-
+            
         }
     }
     
@@ -193,9 +189,6 @@ class QuizViewController: UIViewController {
     
     
     
-    
-    
-    
     //MARK : getRandomName()
     func getRandomName(isPresent : [String])-> String {
         
@@ -211,11 +204,10 @@ class QuizViewController: UIViewController {
     
     // MARK : checkAns()
     func checkAns (userAns : String , userAnsBtnTag : Int)->Void{
-        
         if (userAns == selectedCatNames[imageNum]){
             score = score + 1;
-              enableOrDisableBtns(disable: true)
-             let btn = self.view.viewWithTag(userAnsBtnTag) as? UIButton
+            enableOrDisableBtns(disable: true)
+            let btn = self.view.viewWithTag(userAnsBtnTag) as? UIButton
             btn?.backgroundColor = UIColor(hexFromString: "#B1D3C3")
             let tagNo = cheerBtnTags[userAnsBtnTag]
             let showCheerBtn = self.view.viewWithTag(tagNo!) as? DOFavoriteButton
@@ -234,8 +226,7 @@ class QuizViewController: UIViewController {
                     print (btnToAnimate.tag)
                 }
             }
-            
-            UIButton.animate(withDuration: 0.2, animations: {
+            UIButton.animate(withDuration: 0.4, animations: {
                 for btn in self.optionBtns {
                     if (btn != btnToAnimate){
                         btn.backgroundColor = UIColor(hexFromString: "#D19D9C")
@@ -249,18 +240,15 @@ class QuizViewController: UIViewController {
         }
     }
     
-    //MARK : cheerUserUp();
+    
     
     
     //MARK  : changeBtnUI();
     func changeBtnUI(){
-         let y = [346,404,462,520]
         var index = 0;
         for i in optionBtnTags{
             let btn = self.view.viewWithTag(i) as? UIButton
-            btn?.frame = CGRect(x: 25, y: y[index], width: 330, height: 50)
             btn?.backgroundColor = UIColor(hexFromString: "#DAE6E8")
-
             btn?.layer.cornerRadius = (btn?.bounds.size.height)!/2
             btn?.clipsToBounds = true
             btn?.layer.shadowOffset = CGSize(width: 3, height: 5)
@@ -308,16 +296,16 @@ class QuizViewController: UIViewController {
         for btn in optionBtns{
             if (disable){
                 btn.isEnabled = false
-        }
+            }
             else {
                 btn.isEnabled = true
             }
-    }
+        }
     }
     
     //MARK : showPopUp()
     func showPopUp(){
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.4, animations: {
             self.labelForPopUp.alpha = 1
             let gradientLayer:CAGradientLayer = CAGradientLayer()
             gradientLayer.frame.size = self.labelForPopUp.frame.size
@@ -328,9 +316,11 @@ class QuizViewController: UIViewController {
             gradientLayer.colors = [color1.cgColor, color2.cgColor,color4.cgColor, UIColor.white.cgColor, color4.cgColor,color3.cgColor]
             self.labelForPopUp.layer.addSublayer(gradientLayer)
             var newFrame = self.PopUpView.frame
-            newFrame.origin.x = 49
+            newFrame.origin.x = 30
             self.PopUpView.frame = newFrame
-            })
+            self.PopUpView.layer.cornerRadius = 5;
+            self.PopUpView.layer.masksToBounds = true;
+        })
     }
     
     

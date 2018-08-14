@@ -48,7 +48,6 @@ class ViewController: UIViewController {
         if segue.identifier == "goToQuiz"{
             let quizVC = segue.destination as! QuizViewController
             quizVC.category = categorySelected
-            
         }
     }
     
@@ -74,7 +73,6 @@ class ViewController: UIViewController {
     
     func addBtnsBorder () {
         for btn in QuizBtns {
-            print(btn.tag)
             btn.layer.shadowOffset = CGSize(width: 3, height: 2)
             btn.layer.shadowColor = UIColor(hexFromString: "#C0C0C0").cgColor
             btn.layer.shadowRadius = 1
